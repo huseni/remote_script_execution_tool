@@ -1,0 +1,10 @@
+filebeat:
+  prospectors:
+   -
+      paths:
+        - "/var/log/syslog"
+      document_type: system.log
+output:
+  logstash:
+    # Array of hosts to connect to.
+     hosts: ["10.3.3.191:5044"]
